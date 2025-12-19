@@ -7,7 +7,6 @@ from google import genai
 
 def get_response(client, prompt):
 
-
     response = client.models.generate_content(
         model='gemini-2.5-flash',
         contents=prompt,
