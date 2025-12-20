@@ -2,12 +2,41 @@ import os, argparse
 from dotenv import load_dotenv
 from google import genai
 from google.genai import types
+from config import SYSPROMPT
+from available_functions import available_functions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 def generate_content(client, messages, args=None):
 
     response = client.models.generate_content(
-        model='gemini-2.5-flash', contents=messages,
+        model='gemini-2.5-flash',
+        contents=messages,
+        config=types.GenerateContentConfig(
+            tools=[available_functions], system_instruction=SYSPROMPT
+            )
     )
+
     if response.usage_metadata is None:
         raise RuntimeError('FAILED API REQUEST: TIME EXCEED')
 
@@ -18,6 +47,9 @@ def generate_content(client, messages, args=None):
         print('Prompt tokens:',response.usage_metadata.prompt_token_count)
         print('Response tokens:',response.usage_metadata.candidates_token_count)
 
+    if response.function_calls:
+        for function_call in response.function_calls:
+            print(f"Calling function: {function_call.name}({function_call.args})")
     print('Response:',response.text)
 
 
