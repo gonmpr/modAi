@@ -10,3 +10,6 @@ uv.lock
 # Virtual environments
 .venv
 .env
+
+#example projects for testing
+calculator/
