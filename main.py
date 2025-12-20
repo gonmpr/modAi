@@ -41,5 +41,7 @@ def main():
     messages = [types.Content(role="user", parts=[types.Part(text=args.user_prompt)])]
 
     generate_content(client, messages, args)
+
+
 if __name__ == "__main__":
     main()
