@@ -103,6 +103,7 @@ def main():
             response = content(client)
 
             if response:
+                print('\n--------------------------------------------\n')
                 print('Final response:',response)
                 break
 
