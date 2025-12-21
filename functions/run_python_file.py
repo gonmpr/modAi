@@ -29,7 +29,7 @@ def run_python_file(working_directory, file_path, args=None):
         if result.returncode != 0:
             output_str += f"Process exited with code {result.returncode}\n"
 
-        output_str += f"No output produced\n" if not result.stdout or result.stderr else f"STDOUT: {result.stdout} STDERR: {result.stderr}\n"
+        output_str += f"No output produced\n" if not (result.stdout or result.stderr) else f"STDOUT: {result.stdout} STDERR: {result.stderr}\n"
 
         return output_str
 
