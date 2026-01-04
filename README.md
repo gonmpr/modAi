@@ -60,7 +60,7 @@ and then, you can use like this:
 python main.py "your prompt here"
 ```
 
-or if you prefer seing debuggint output:
+If you prefer seing debugging output:
 ```
 python main.py "your prompt here" --verbose
 ```
@@ -70,3 +70,4 @@ python main.py "your prompt here" --verbose
 - Iteration count is hard-limited
 - Naming and behavior are intentionally informal
 - The goal is learning and inspection, not reliability
+
