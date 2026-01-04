@@ -46,5 +46,27 @@ The control flow is intentionally explicit and iterative to keep behavior observ
 
 Create a `.env` file:
 
+
+
 ```env
 GEMINI_API_KEY=your_api_key_here
+```
+
+## Usage
+First, you have to declare your ```WORKINGDIR``` in the ```config.py``` file
+
+and then, you can use like this:
+```
+python main.py "your prompt here"
+```
+
+or if you prefer seing debuggint output:
+```
+python main.py "your prompt here" --verbose
+```
+
+## Notes
+- Error handling is minimal by design
+- Iteration count is hard-limited
+- Naming and behavior are intentionally informal
+- The goal is learning and inspection, not reliability
