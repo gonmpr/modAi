@@ -2,7 +2,7 @@
 
 Personal project made to **experiment with agent-like behavior**, function calling, and iterative prompting using the **Google Gemini API**.
 
-This is not meant to be a robust CLI tool or a general-purpose assistant **MUST NOT BE USED IF YOU DON'T KNOW WHAT YOU DOING**  
+This is not meant to be a robust CLI tool or a general-purpose assistant, **MUST NOT BE USED IF YOU DON'T KNOW WHAT YOU DOING**.
 It exists mainly as a playground to explore how tool calls, system prompts, and feedback loops behave.
 
 ## What it is
@@ -70,5 +70,6 @@ python main.py "your prompt here" --verbose
 - Iteration count is hard-limited
 - Naming and behavior are intentionally informal
 - The goal is learning and inspection, not reliability
+
 
 
