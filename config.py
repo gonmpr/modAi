@@ -2,7 +2,7 @@
 # maximum amount of chars the llm will read from a file
 MAXCHARS = 10000
 
-WORKINGDIR = './calculator'
+WORKINGDIR = "<WORKING DIRECTORY PATH COMES HERE>"
 
 SYSPROMPT = """
 You are a helpful AI coding agent.
